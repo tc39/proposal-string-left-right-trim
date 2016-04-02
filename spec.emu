@@ -93,7 +93,7 @@ contributors: Sebastian Markbåge, Tom Schuster
     1. Else if _where_ is `"end"`, let _T_ be a String value that is a copy of _S_ with trailing white space removed.
     1. Else,
       1. Assert: _where_ is `"start+end"`.
-      1. let _T_ be a String value that is a copy of _S_ with both leading and trailing white space removed.
+      1. Let _T_ be a String value that is a copy of _S_ with both leading and trailing white space removed.
     1. Return _T_.
   </emu-alg>
   <p>The definition of white space is the union of |WhiteSpace| and |LineTerminator|. When determining whether a Unicode code point is in Unicode general category &ldquo;Zs&rdquo;, code unit sequences are interpreted as UTF-16 encoded code point sequences as specified in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref></p>
