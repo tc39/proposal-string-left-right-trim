@@ -14,7 +14,7 @@ contributors: Sebastian Markbåge, Tom Schuster
     <p>The following steps are taken:</p>
     <emu-alg>
       1. Let _S_ be *this* value.
-      1. Return ? TrimString(_S_, "start+end").
+      1. Return ? TrimString(_S_, `"start+end"`).
     </emu-alg>
     <emu-note>
       <p>The `trim` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
@@ -26,7 +26,7 @@ contributors: Sebastian Markbåge, Tom Schuster
     <p>The following steps are taken:</p>
     <emu-alg>
       1. Let _S_ be *this* value.
-      1. Return ? TrimString(_S_, "start").
+      1. Return ? TrimString(_S_, `"start"`).
     </emu-alg>
     <emu-note>
       <p>The `trimStart` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
@@ -38,7 +38,7 @@ contributors: Sebastian Markbåge, Tom Schuster
     <p>The following steps are taken:</p>
     <emu-alg>
       1. Let _S_ be *this* value.
-      1. Return ? TrimString(_S_, "end").
+      1. Return ? TrimString(_S_, `"end"`).
     </emu-alg>
     <emu-note>
       <p>The `trimEnd` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
