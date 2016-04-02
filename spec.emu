@@ -1,0 +1,56 @@
+<!doctype html>
+<meta charset="utf8">
+<link rel="stylesheet" href="./spec.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/github.min.css">
+<script src="./spec.js"></script>
+<pre class="metadata">
+title: String.prototype.trimStart/trimEnd (plus trimLeft/trimRight)
+stage: 1
+contributors: Sebastian Markbåge, Tom Schuster
+</pre>
+
+<emu-clause id="String.prototype.trimStart">
+    <h1>String.prototype.trimStart ( )</h1>
+    <p>This function interprets a String value as a sequence of UTF-16 encoded code points, as described in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>.</p>
+    <p>The following steps are taken:</p>
+    <emu-alg>
+      1. Let _O_ be ? RequireObjectCoercible(*this* value).
+      1. Let _S_ be ? ToString(_O_).
+      1. Let _T_ be a String value that is a copy of _S_ with leading white space removed. The definition of white space is the union of |WhiteSpace| and |LineTerminator|. When determining whether a Unicode code point is in Unicode general category &ldquo;Zs&rdquo;, code unit sequences are interpreted as UTF-16 encoded code point sequences as specified in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>.
+      1. Return _T_.
+    </emu-alg>
+    <emu-note>
+      <p>The `trimStart` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
+    </emu-note>
+</emu-clause>
+
+<emu-clause id="String.prototype.trimEnd">
+    <h1>String.prototype.trimEnd ( )</h1>
+    <p>This function interprets a String value as a sequence of UTF-16 encoded code points, as described in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>.</p>
+    <p>The following steps are taken:</p>
+    <emu-alg>
+      1. Let _O_ be ? RequireObjectCoercible(*this* value).
+      1. Let _S_ be ? ToString(_O_).
+      1. Let _T_ be a String value that is a copy of _S_ with trailing white space removed. The definition of white space is the union of |WhiteSpace| and |LineTerminator|. When determining whether a Unicode code point is in Unicode general category &ldquo;Zs&rdquo;, code unit sequences are interpreted as UTF-16 encoded code point sequences as specified in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>.
+      1. Return _T_.
+    </emu-alg>
+    <emu-note>
+      <p>The `trimEnd` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
+    </emu-note>
+</emu-clause>
+
+<emu-annex id="String.prototype.trimLeft">
+    <h1>String.prototype.trimLeft ( )</h1>
+    <emu-note>
+      <p>The property `trimStart` is preferred. The `trimLeft` property is provided principally for compatibility with old code. It is recommended that the `trimStart` property be used in new ECMAScript code.</p>
+    </emu-note>
+    <p>The function object that is the initial value of `String.prototype.trimLeft` is the same function object that is the initial value of `String.prototype.trimStart`.</p>
+</emu-annex>
+
+<emu-annex id="String.prototype.trimRight">
+    <h1>String.prototype.trimRight ( )</h1>
+    <emu-note>
+      <p>The property `trimEnd` is preferred. The `trimRight` property is provided principally for compatibility with old code. It is recommended that the `trimEnd` property be used in new ECMAScript code.</p>
+    </emu-note>
+    <p>The function object that is the initial value of `String.prototype.trimRight` is the same function object that is the initial value of `String.prototype.trimEnd`.</p>
+</emu-annex>
