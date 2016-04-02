@@ -9,6 +9,9 @@ stage: 1
 contributors: Sebastian Markbåge, Tom Schuster
 </pre>
 
+<emu-clause id="without-abstract">
+  <h1>Without abstract operation</h1>
+
 <emu-clause id="String.prototype.trimStart">
     <h1>String.prototype.trimStart ( )</h1>
     <p>This function interprets a String value as a sequence of UTF-16 encoded code points, as described in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>.</p>
@@ -39,6 +42,68 @@ contributors: Sebastian Markbåge, Tom Schuster
     </emu-note>
 </emu-clause>
 
+</emu-clause>
+
+<emu-clause id="with-abstract">
+<h1>With abstract operation</h1>
+
+<emu-clause id="String.prototype.trim-2">
+    <h1>String.prototype.trim ( )</h1>
+    <p>The following steps are taken:</p>
+    <emu-alg>
+      1. Let _S_ be *this* value.
+      1. Return ? TrimString(_S_, "start+end").
+    </emu-alg>
+    <emu-note>
+      <p>The `trim` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
+    </emu-note>
+</emu-clause>
+
+<emu-clause id="String.prototype.trimStart-2">
+    <h1>String.prototype.trimStart ( )</h1>
+    <p>The following steps are taken:</p>
+    <emu-alg>
+      1. Let _S_ be *this* value.
+      1. Return ? TrimString(_S_, "start").
+    </emu-alg>
+    <emu-note>
+      <p>The `trimStart` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
+    </emu-note>
+</emu-clause>
+
+<emu-clause id="String.prototype.trimEnd-2">
+    <h1>String.prototype.trimEnd ( )</h1>
+    <p>The following steps are taken:</p>
+    <emu-alg>
+      1. Let _S_ be *this* value.
+      1. Return ? TrimString(_S_, "end").
+    </emu-alg>
+    <emu-note>
+      <p>The `trimEnd` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
+    </emu-note>
+</emu-clause>
+
+<emu-clause id="sec-trimstring" aoid="TrimString">
+  <h1>Runtime Semantics: TrimString ( _string_, _where_ )</h1>
+  <p>The abstract operation TrimString is called with arguments _string_ and _where_, and interprets the String value _string_  as a sequence of UTF-16 encoded code points, as described in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>. It performs the following steps:</p>
+  <emu-alg>
+    1. Let _str_ be ? RequireObjectCoercible(_string_).
+    1. Let _S_ be ? ToString(_str_).
+    1. If _where_ is `"start"`, let _T_ be a String value that is a copy of _S_ with leading white space removed.
+    1. Else if _where_ is `"end"`, let _T_ be a String value that is a copy of _S_ with trailing white space removed.
+    1. Else,
+      1. Assert: _where_ is `"start+end"`.
+      1. let _T_ be a String value that is a copy of _S_ with both leading and trailing white space removed.
+    1. Return _T_.
+  </emu-alg>
+  <p>The definition of white space is the union of |WhiteSpace| and |LineTerminator|. When determining whether a Unicode code point is in Unicode general category &ldquo;Zs&rdquo;, code unit sequences are interpreted as UTF-16 encoded code point sequences as specified in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref></p>
+</emu-clause>
+
+</emu-clause>
+
+<emu-annex id="sec-additional-ecmascript-features-for-web-browsers" namespace=annexB normative>
+  <h1>Additional ECMAScript Features for Web Browsers</h1>
+
 <emu-annex id="String.prototype.trimLeft">
     <h1>String.prototype.trimLeft ( )</h1>
     <emu-note>
@@ -53,4 +118,6 @@ contributors: Sebastian Markbåge, Tom Schuster
       <p>The property `trimEnd` is preferred. The `trimRight` property is provided principally for compatibility with old code. It is recommended that the `trimEnd` property be used in new ECMAScript code.</p>
     </emu-note>
     <p>The function object that is the initial value of `String.prototype.trimRight` is the same function object that is the initial value of `String.prototype.trimEnd`.</p>
+</emu-annex>
+
 </emu-annex>
