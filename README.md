@@ -8,7 +8,7 @@ Since these are defacto standard across engines, I propose that these are standa
 
 ## Bidi and Right-to-Left Strings
 
-In [this discussion](https://esdiscuss.org/topic/string-prototype-trimright-trimleft) it was noted that the words `left` and `right` doesn't make sense for bidirectional and right-to-left languages. A more appropriately name for these functions would be `trimStart` and `trimEnd` which corresponds to the existing `startsWith` and `endsWith`.
+In [this discussion](https://esdiscuss.org/topic/string-prototype-trimright-trimleft) it was noted that the words `left` and `right` doesn't make sense for bidirectional and right-to-left languages. A more appropriate name for these functions would be `trimStart` and `trimEnd` which corresponds to the existing `startsWith` and `endsWith`.
 
 Unfortunately, all engines already implement them and removing them would likely break the web.
 
