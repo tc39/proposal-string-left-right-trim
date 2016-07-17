@@ -12,10 +12,20 @@ contributors: Sebastian Markbåge, Tom Schuster
 <emu-clause id="String.prototype.trim">
     <h1>String.prototype.trim ( )</h1>
     <p>The following steps are taken:</p>
-    <emu-alg>
-      1. Let _S_ be *this* value.
-      1. Return ? TrimString(_S_, `"start+end"`).
-    </emu-alg>
+    <del class="block">
+      <emu-alg>
+        1. Let _O_ be ? RequireObjectCoercible(*this* value).
+        1. Let _S_ be ? ToString(_O_).
+        1. Let _T_ be a String value that is a copy of _S_ with both leading and trailing white space removed. The definition of white space is the union of |WhiteSpace| and |LineTerminator|. When determining whether a Unicode code point is in Unicode general category &ldquo;Space_Separator&rdquo; (&ldquo;Zs&rdquo;), code unit sequences are interpreted as UTF-16 encoded code point sequences as specified in <emu-xref href="#sec-ecmascript-language-types-string-type"></emu-xref>.
+        1. Return _T_.
+      </emu-alg>
+    </del>
+    <ins class="block">
+      <emu-alg>
+        1. Let _S_ be *this* value.
+        1. Return ? TrimString(_S_, `"start+end"`).
+      </emu-alg>
+    </ins>
     <emu-note>
       <p>The `trim` function is intentionally generic; it does not require that its *this* value be a String object. Therefore, it can be transferred to other kinds of objects for use as a method.</p>
     </emu-note>
