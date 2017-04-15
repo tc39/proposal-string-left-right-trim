@@ -4,7 +4,7 @@ ECMAScript proposal, specs, tests, and reference implementation for String.proto
 
 ## Rationale
 ES5 standardized `String.prototype.trim`. All major engines have also implemented corresponding `trimLeft` and `trimRight` functions - without any standard specification.
-For consistency with `padStart`/`padRight` we propose `trimStart` and `trimEnd` and `trimLeft`/`trimRight` as aliases required for web compatibility.
+For consistency with `padStart`/`padEnd` we propose `trimStart` and `trimEnd` and `trimLeft`/`trimRight` as aliases required for web compatibility.
 
 ## Specification
 You can view the spec in [ecmarkup](spec.emu) or rendered as [HTML](https://sebmarkbage.github.io/ecmascript-string-left-right-trim/).
