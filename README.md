@@ -7,7 +7,7 @@ ES5 standardized `String.prototype.trim`. All major engines have also implemente
 For consistency with `padStart`/`padEnd` we propose `trimStart` and `trimEnd` and `trimLeft`/`trimRight` as aliases required for web compatibility.
 
 ## Specification
-You can view the spec in [ecmarkup](spec.emu) or rendered as [HTML](https://sebmarkbage.github.io/ecmascript-string-left-right-trim/).
+You can view the spec in [ecmarkup](spec.emu) or rendered as [HTML](https://tc39.github.io/proposal-string-left-right-trim/).
 
 ## Naming / Aliasing
 For consistency with `padStart`/`padEnd` the standard functions will be `trimStart` and `trimEnd`, however for web compatilibity `trimLeft` will alias `trimStart` and `trimRight` will alias `trimEnd`. This means `String.prototype.trimRight.name` will change from `"trimRight"` to `"trimEnd"` in most engines. The spec author does not expect this to cause any breakage.
