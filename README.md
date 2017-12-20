@@ -19,3 +19,10 @@ This initial proposal was drafted by [@sebmarkbage](https://github.com/sebmarkba
 This proposal is currently at [stage 2](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/).
 
 Designated TC39 reviewers: TBD
+
+## Polyfill
+
+In case you want to use these APIs in current browsers and see it in action you can use the following polyfills by [@KhaledElAnsari](https://github.com/KhaledElAnsari)
+
+- String#trimStart: https://github.com/KhaledElAnsari/String.prototype.trimStart
+- String#trimEnd: https://github.com/KhaledElAnsari/String.prototype.trimEnd
