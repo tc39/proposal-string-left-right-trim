@@ -12,6 +12,10 @@ You can view the spec in [ecmarkup](spec.emu) or rendered as [HTML](https://tc39
 ## Naming / Aliasing
 For consistency with `padStart`/`padEnd` the standard functions will be `trimStart` and `trimEnd`, however for web compatilibity `trimLeft` will alias `trimStart` and `trimRight` will alias `trimEnd`. This means `String.prototype.trimRight.name` will change from `"trimRight"` to `"trimEnd"` in most engines. The spec author does not expect this to cause any breakage.
 
+## Test262 Coverage
+
+[PR open](https://github.com/tc39/test262/pull/1246)
+
 ## Status of This Proposal
 
 This initial proposal was drafted by [@sebmarkbage](https://github.com/sebmarkbage) and the updated spec was drafted by [@evilpie](https://github.com/evilpie/) with input from [@ljharb](https://github.com/ljharb).
