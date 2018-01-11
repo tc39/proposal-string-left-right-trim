@@ -18,4 +18,6 @@ This initial proposal was drafted by [@sebmarkbage](https://github.com/sebmarkba
 
 This proposal is currently at [stage 2](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/).
 
-Designated TC39 reviewers: TBD
+Designated TC39 reviewers: Jordan Harband + Daniel Ehrenberg
+
+
