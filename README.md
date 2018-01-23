@@ -24,4 +24,6 @@ This proposal is currently at [stage 2](https://github.com/tc39/ecma262) of the 
 
 Designated TC39 reviewers: Jordan Harband + Daniel Ehrenberg
 
+## Implementations
 
+- [V8](https://bugs.chromium.org/p/v8/issues/detail?id=6530), behind the `--harmony-string-trimming` flag
