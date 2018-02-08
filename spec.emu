@@ -5,7 +5,7 @@
 <script src="./spec.js"></script>
 <pre class="metadata">
 title: String.prototype.trimStart/trimEnd (plus trimLeft/trimRight)
-stage: 2
+stage: 3
 contributors: Sebastian Markbåge, Tom Schuster
 </pre>
 
