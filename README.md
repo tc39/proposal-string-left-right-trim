@@ -26,4 +26,5 @@ Designated TC39 reviewers: Jordan Harband + Daniel Ehrenberg
 
 ## Implementations
 
-- [V8](https://bugs.chromium.org/p/v8/issues/detail?id=6530), behind the `--harmony-string-trimming` flag
+- [V8](https://bugs.chromium.org/p/v8/issues/detail?id=6530), in Chrome 66+
+- [SpiderMonkey](https://bugzilla.mozilla.org/show_bug.cgi?id=1434007#c12), in Firefox 61+
