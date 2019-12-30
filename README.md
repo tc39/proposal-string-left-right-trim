@@ -2,6 +2,10 @@
 
 ECMAScript proposal, specs, tests, and reference implementation for String.prototype.trimStart/trimEnd (plus **trimLeft/trimRight**).
 
+**Stage 4**
+
+This proposal is complete and already merged into [ECMA262 specification](https://tc39.es/ecma262/). See the specification text here.
+
 ## Rationale
 ES5 standardized `String.prototype.trim`. All major engines have also implemented corresponding `trimLeft` and `trimRight` functions - without any standard specification.
 For consistency with `padStart`/`padEnd` we propose `trimStart` and `trimEnd` and `trimLeft`/`trimRight` as aliases required for web compatibility.
@@ -20,7 +24,7 @@ For consistency with `padStart`/`padEnd` the standard functions will be `trimSta
 
 This initial proposal was drafted by [@sebmarkbage](https://github.com/sebmarkbage) and the updated spec was drafted by [@evilpie](https://github.com/evilpie/) with input from [@ljharb](https://github.com/ljharb).
 
-This proposal is currently at [stage 3](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/).
+This proposal is currently at [stage 4](https://github.com/tc39/ecma262) of the [process](https://tc39.github.io/process-document/).
 
 Designated TC39 reviewers: Jordan Harband + Daniel Ehrenberg
 
